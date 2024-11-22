@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "tb67h450.h": "c",
+        "sin_map.h": "c",
+        "stdint.h": "c",
+        "bsp_flash.h": "c",
+        "board_cfg.h": "c",
+        "main.h": "c",
+        "encoder_calibration.h": "c",
+        "spi.h": "c",
+        "usart.h": "c",
+        "type_traits": "c"
+    }
+}
