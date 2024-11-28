@@ -35,5 +35,5 @@ stepper_ctrl_fw/bsp_flash.o: ..\Bsp\bsp_flash.c ..\Bsp\bsp_flash.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim_ex.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h \
   ..\Core\Inc\tim.h ..\Core\Inc\gpio.h ..\Core\Inc\usart.h \
-  ..\Ctrl\sin_map.h ..\Ctrl\tb67h450.h ..\Encoder\encoder.h \
-  ..\Encoder\encoder_calibration.h
+  ..\Ctrl\sin_map.h ..\Ctrl\tb67h450.h ..\Ctrl\controller.h \
+  ..\Encoder\encoder.h ..\Encoder\encoder_calibration.h

@@ -3,6 +3,79 @@
 
 #include "board_cfg.h"
 
+typedef struct
+{
+    int32_t default_kp;
+    int32_t default_ki;
+    int32_t default_kd;
+
+    bool valid_kp;
+    bool valid_ki;
+    bool valid_kd;
+}pid_config_t;
+
+typedef struct
+{
+    pid_config_t config_;
+
+	int32_t	kp;
+    int32_t ki;
+    int32_t kd;						
+	int32_t	v_error;
+    int32_t v_error_last;	
+	int32_t	output_kp;
+    int32_t output_ki;
+    int32_t output_kd;							
+	int32_t	i_mut; 
+    int32_t i_dec;							
+	int32_t	output;										
+}pid_t;
+
+void pid_set_kp(uint16_t _k);		
+void pid_set_ki(uint16_t _k);	
+void pid_set_kd(uint16_t _k);		
+void pid_set_default(void);	
+
+void pid_init(void);
+
+typedef struct
+{
+    int32_t default_kp;
+    int32_t default_ki;
+    int32_t default_kv;
+    int32_t default_kd;
+
+    bool valid_kp;
+    bool valid_ki;
+    bool valid_kv;
+    bool valid_kd;
+}dec_config_t;
+
+typedef struct
+{
+    dec_config_t config_;
+    
+	int32_t	kp;
+    int32_t ki;
+    int32_t kv;
+    int32_t kd;			
+	int32_t	p_error;
+    int32_t v_error;											
+	int32_t	output_kp;
+    int32_t output_ki;
+    int32_t output_kd;													
+	int32_t	i_mut;
+    int32_t i_dec;													
+	int32_t	output;															
+}dce_t;
+
+void dce_set_kp(uint16_t _k);
+void dce_set_ki(uint16_t _k);
+void dce_set_kv(uint16_t _k);
+void dce_set_kd(uint16_t _k);
+void dce_set_default(void);
+void dce_init(void);
+
 typedef struct 
 {
     float default_up_rate;
@@ -110,8 +183,8 @@ void position_interp_capture_goal(int32_t goal_location);
 
 typedef struct
 {
-    float traj_tracker_max_overtime;
-    float traj_tracker_min_overtime;
+    float max_overtime;
+    float min_overtime;
 
     float default_down_acc;
     float default_overtime;
@@ -125,7 +198,7 @@ typedef struct
 
 typedef struct
 {
-    traj_tracker_config_t config;
+    traj_tracker_config_t config_;
     int32_t	dyn_speed_acc;
     int32_t	record_timer;
     bool overtime_flag;		
@@ -150,13 +223,15 @@ void traj_tracker_capture_goal(int32_t goal_location, int32_t goal_speed);
 
 typedef struct
 {
+    pid_t pid;
+    dce_t dce;
     current_ctrl_t current_tracker;
     speed_ctrl_t	speed_tracker;
     position_ctrl_t	position_tracker;
     position_interp_t position_interp;
     traj_tracker_ctrl_t traj_tracker;
 }controller_t;
-controller_t controller;
+extern controller_t controller;
 
 
 #endif

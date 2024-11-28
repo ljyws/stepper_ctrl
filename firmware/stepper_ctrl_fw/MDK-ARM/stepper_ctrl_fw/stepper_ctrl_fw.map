@@ -903,6 +903,28 @@ Section Cross References
     encoder_calibration.o(.text.encoder_calibration_loop_callback) refers to bsp_flash.o(.text.flash_write_halfword) for flash_write_halfword
     encoder_calibration.o(.text.encoder_calibration_loop_callback) refers to bsp_flash.o(.text.flash_write_end) for flash_write_end
     encoder_calibration.o(.ARM.exidx.text.encoder_calibration_loop_callback) refers to encoder_calibration.o(.text.encoder_calibration_loop_callback) for [Anonymous Symbol]
+    controller.o(.text.pid_set_kp) refers to controller.o(.bss.controller) for controller
+    controller.o(.ARM.exidx.text.pid_set_kp) refers to controller.o(.text.pid_set_kp) for [Anonymous Symbol]
+    controller.o(.text.pid_set_ki) refers to controller.o(.bss.controller) for controller
+    controller.o(.ARM.exidx.text.pid_set_ki) refers to controller.o(.text.pid_set_ki) for [Anonymous Symbol]
+    controller.o(.text.pid_set_kd) refers to controller.o(.bss.controller) for controller
+    controller.o(.ARM.exidx.text.pid_set_kd) refers to controller.o(.text.pid_set_kd) for [Anonymous Symbol]
+    controller.o(.text.pid_set_default) refers to controller.o(.bss.controller) for controller
+    controller.o(.ARM.exidx.text.pid_set_default) refers to controller.o(.text.pid_set_default) for [Anonymous Symbol]
+    controller.o(.text.pid_init) refers to controller.o(.bss.controller) for controller
+    controller.o(.ARM.exidx.text.pid_init) refers to controller.o(.text.pid_init) for [Anonymous Symbol]
+    controller.o(.text.dce_set_kp) refers to controller.o(.bss.controller) for controller
+    controller.o(.ARM.exidx.text.dce_set_kp) refers to controller.o(.text.dce_set_kp) for [Anonymous Symbol]
+    controller.o(.text.dce_set_ki) refers to controller.o(.bss.controller) for controller
+    controller.o(.ARM.exidx.text.dce_set_ki) refers to controller.o(.text.dce_set_ki) for [Anonymous Symbol]
+    controller.o(.text.dce_set_kv) refers to controller.o(.bss.controller) for controller
+    controller.o(.ARM.exidx.text.dce_set_kv) refers to controller.o(.text.dce_set_kv) for [Anonymous Symbol]
+    controller.o(.text.dce_set_kd) refers to controller.o(.bss.controller) for controller
+    controller.o(.ARM.exidx.text.dce_set_kd) refers to controller.o(.text.dce_set_kd) for [Anonymous Symbol]
+    controller.o(.text.dce_set_default) refers to controller.o(.bss.controller) for controller
+    controller.o(.ARM.exidx.text.dce_set_default) refers to controller.o(.text.dce_set_default) for [Anonymous Symbol]
+    controller.o(.text.dce_init) refers to controller.o(.bss.controller) for controller
+    controller.o(.ARM.exidx.text.dce_init) refers to controller.o(.text.dce_init) for [Anonymous Symbol]
     controller.o(.text.current_tracker_init) refers to controller.o(.bss.controller) for controller
     controller.o(.ARM.exidx.text.current_tracker_init) refers to controller.o(.text.current_tracker_init) for [Anonymous Symbol]
     controller.o(.text.current_tracker_set_up_rate) refers to controller.o(.bss.controller) for controller
@@ -929,8 +951,8 @@ Section Cross References
     controller.o(.text.speed_tracker_set_default) refers to controller.o(.bss.controller) for controller
     controller.o(.text.speed_tracker_set_default) refers to ffix.o(x$fpl$ffix) for __aeabi_f2iz
     controller.o(.ARM.exidx.text.speed_tracker_set_default) refers to controller.o(.text.speed_tracker_set_default) for [Anonymous Symbol]
-    controller.o(.text.postion_tracker_set_maxSpeed) refers to controller.o(.bss.controller) for controller
-    controller.o(.ARM.exidx.text.postion_tracker_set_maxSpeed) refers to controller.o(.text.postion_tracker_set_maxSpeed) for [Anonymous Symbol]
+    controller.o(.text.postion_tracker_set_max_speed) refers to controller.o(.bss.controller) for controller
+    controller.o(.ARM.exidx.text.postion_tracker_set_max_speed) refers to controller.o(.text.postion_tracker_set_max_speed) for [Anonymous Symbol]
     controller.o(.text.postion_tracker_set_up_acc) refers to controller.o(.bss.controller) for controller
     controller.o(.ARM.exidx.text.postion_tracker_set_up_acc) refers to controller.o(.text.postion_tracker_set_up_acc) for [Anonymous Symbol]
     controller.o(.text.postion_tracker_set_down_acc) refers to controller.o(.bss.controller) for controller
@@ -942,7 +964,48 @@ Section Cross References
     controller.o(.text.postion_tracker_set_default) refers to fflt_clz.o(x$fpl$fflt) for __aeabi_i2f
     controller.o(.text.postion_tracker_set_default) refers to fdiv.o(x$fpl$fdiv) for __aeabi_fdiv
     controller.o(.ARM.exidx.text.postion_tracker_set_default) refers to controller.o(.text.postion_tracker_set_default) for [Anonymous Symbol]
+    controller.o(.text.postion_tracker_init) refers to controller.o(.bss.controller) for controller
+    controller.o(.ARM.exidx.text.postion_tracker_init) refers to controller.o(.text.postion_tracker_init) for [Anonymous Symbol]
+    controller.o(.text.postion_tracker_new_task) refers to controller.o(.bss.controller) for controller
+    controller.o(.ARM.exidx.text.postion_tracker_new_task) refers to controller.o(.text.postion_tracker_new_task) for [Anonymous Symbol]
+    controller.o(.text.postion_tracker_capture_goal) refers to controller.o(.bss.controller) for controller
+    controller.o(.text.postion_tracker_capture_goal) refers to fflt_clz.o(x$fpl$fflt) for __aeabi_i2f
+    controller.o(.text.postion_tracker_capture_goal) refers to fmul.o(x$fpl$fmul) for __aeabi_fmul
+    controller.o(.text.postion_tracker_capture_goal) refers to ffix.o(x$fpl$ffix) for __aeabi_f2iz
+    controller.o(.ARM.exidx.text.postion_tracker_capture_goal) refers to controller.o(.text.postion_tracker_capture_goal) for [Anonymous Symbol]
+    controller.o(.text.position_interp_init) refers to controller.o(.bss.controller) for controller
+    controller.o(.ARM.exidx.text.position_interp_init) refers to controller.o(.text.position_interp_init) for [Anonymous Symbol]
+    controller.o(.text.position_interp_new_task) refers to controller.o(.bss.controller) for controller
+    controller.o(.ARM.exidx.text.position_interp_new_task) refers to controller.o(.text.position_interp_new_task) for [Anonymous Symbol]
+    controller.o(.text.position_interp_capture_goal) refers to controller.o(.bss.controller) for controller
+    controller.o(.ARM.exidx.text.position_interp_capture_goal) refers to controller.o(.text.position_interp_capture_goal) for [Anonymous Symbol]
+    controller.o(.text.traj_tracker_set_down_acc) refers to controller.o(.bss.controller) for controller
+    controller.o(.ARM.exidx.text.traj_tracker_set_down_acc) refers to controller.o(.text.traj_tracker_set_down_acc) for [Anonymous Symbol]
+    controller.o(.text.traj_tracker_set_over_time) refers to fflt_clz.o(x$fpl$ffltu) for __aeabi_ui2f
+    controller.o(.text.traj_tracker_set_over_time) refers to controller.o(.bss.controller) for controller
+    controller.o(.text.traj_tracker_set_over_time) refers to fcmp.o(x$fpl$fcmp) for __aeabi_fcmpgt
+    controller.o(.ARM.exidx.text.traj_tracker_set_over_time) refers to controller.o(.text.traj_tracker_set_over_time) for [Anonymous Symbol]
+    controller.o(.text.traj_tracker_set_default) refers to controller.o(.bss.controller) for controller
+    controller.o(.text.traj_tracker_set_default) refers to ffix.o(x$fpl$ffix) for __aeabi_f2iz
+    controller.o(.text.traj_tracker_set_default) refers to fflt_clz.o(x$fpl$ffltu) for __aeabi_ui2f
+    controller.o(.text.traj_tracker_set_default) refers to fcmp.o(x$fpl$fcmp) for __aeabi_fcmpgt
+    controller.o(.ARM.exidx.text.traj_tracker_set_default) refers to controller.o(.text.traj_tracker_set_default) for [Anonymous Symbol]
+    controller.o(.text.traj_tracker_init) refers to controller.o(.bss.controller) for controller
+    controller.o(.text.traj_tracker_init) refers to fcmp.o(x$fpl$fcmp) for __aeabi_fcmpgt
+    controller.o(.ARM.exidx.text.traj_tracker_init) refers to controller.o(.text.traj_tracker_init) for [Anonymous Symbol]
+    controller.o(.text.traj_tracker_new_task) refers to controller.o(.bss.controller) for controller
+    controller.o(.ARM.exidx.text.traj_tracker_new_task) refers to controller.o(.text.traj_tracker_new_task) for [Anonymous Symbol]
+    controller.o(.text.traj_tracker_capture_goal) refers to controller.o(.bss.controller) for controller
+    controller.o(.text.traj_tracker_capture_goal) refers to fflt_clz.o(x$fpl$fflt) for __aeabi_i2f
+    controller.o(.text.traj_tracker_capture_goal) refers to fmul.o(x$fpl$fmul) for __aeabi_fmul
+    controller.o(.text.traj_tracker_capture_goal) refers to fdiv.o(x$fpl$fdiv) for __aeabi_fdiv
+    controller.o(.text.traj_tracker_capture_goal) refers to ffix.o(x$fpl$ffix) for __aeabi_f2iz
+    controller.o(.ARM.exidx.text.traj_tracker_capture_goal) refers to controller.o(.text.traj_tracker_capture_goal) for [Anonymous Symbol]
     __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
+    fcmp.o(x$fpl$fcmp) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fcmp.o(x$fpl$fcmp) refers to feqf.o(x$fpl$feqf) for _fcmpeq
+    fcmp.o(x$fpl$fcmp) refers to fgeqf.o(x$fpl$fgeqf) for _fcmpge
+    fcmp.o(x$fpl$fcmp) refers to fleqf.o(x$fpl$fleqf) for _fcmple
     fdiv.o(x$fpl$frdiv) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
     fdiv.o(x$fpl$frdiv) refers to fdiv.o(x$fpl$fdiv) for _fdiv1
     fdiv.o(x$fpl$fdiv) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
@@ -955,12 +1018,24 @@ Section Cross References
     fflt_clz.o(x$fpl$ffltu) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
     fflt_clz.o(x$fpl$fflt) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
     fflt_clz.o(x$fpl$ffltn) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fmul.o(x$fpl$fmul) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fmul.o(x$fpl$fmul) refers to fretinf.o(x$fpl$fretinf) for __fpl_fretinf
+    fmul.o(x$fpl$fmul) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000C) for __rt_entry_postli_1
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000009) for __rt_entry_postsh_1
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000002) for __rt_entry_presh_1
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for __rt_entry_sh
+    feqf.o(x$fpl$feqf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    feqf.o(x$fpl$feqf) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    feqf.o(x$fpl$feqf) refers to fcmpi.o(x$fpl$fcmpinf) for __fpl_fcmp_Inf
+    fgeqf.o(x$fpl$fgeqf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fgeqf.o(x$fpl$fgeqf) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    fgeqf.o(x$fpl$fgeqf) refers to fcmpi.o(x$fpl$fcmpinf) for __fpl_fcmp_Inf
+    fleqf.o(x$fpl$fleqf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fleqf.o(x$fpl$fleqf) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    fleqf.o(x$fpl$fleqf) refers to fcmpi.o(x$fpl$fcmpinf) for __fpl_fcmp_Inf
     fnaninf.o(x$fpl$fnaninf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
     fretinf.o(x$fpl$fretinf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
     __rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to boardinit2.o(.text) for _platform_post_stackheap_init
@@ -975,6 +1050,7 @@ Section Cross References
     __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for .ARM.Collect$$rtentry$$0000000D
     __rtentry4.o(.ARM.Collect$$rtentry$$00000004) refers to sys_stackheap_outer.o(.text) for __user_setup_stackheap
     __rtentry4.o(.ARM.exidx) refers to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for .ARM.Collect$$rtentry$$00000004
+    fcmpi.o(x$fpl$fcmpinf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
     sys_stackheap_outer.o(.text) refers to libspace.o(.text) for __user_perproc_libspace
     sys_stackheap_outer.o(.text) refers to startup_stm32f103xb.o(.text) for __user_initial_stackheap
     exit.o(.text) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for __rt_exit
@@ -1932,41 +2008,88 @@ Removing Unused input sections from the image.
     Removing sin_map.o(.text), (0 bytes).
     Removing sin_map.o(.data.sin_pi_m2), (2050 bytes).
     Removing controller.o(.text), (0 bytes).
-    Removing controller.o(.text.current_tracker_init), (76 bytes).
+    Removing controller.o(.text.pid_set_kp), (24 bytes).
+    Removing controller.o(.ARM.exidx.text.pid_set_kp), (8 bytes).
+    Removing controller.o(.text.pid_set_ki), (24 bytes).
+    Removing controller.o(.ARM.exidx.text.pid_set_ki), (8 bytes).
+    Removing controller.o(.text.pid_set_kd), (24 bytes).
+    Removing controller.o(.ARM.exidx.text.pid_set_kd), (8 bytes).
+    Removing controller.o(.text.pid_set_default), (58 bytes).
+    Removing controller.o(.ARM.exidx.text.pid_set_default), (8 bytes).
+    Removing controller.o(.text.pid_init), (88 bytes).
+    Removing controller.o(.ARM.exidx.text.pid_init), (8 bytes).
+    Removing controller.o(.text.dce_set_kp), (26 bytes).
+    Removing controller.o(.ARM.exidx.text.dce_set_kp), (8 bytes).
+    Removing controller.o(.text.dce_set_ki), (26 bytes).
+    Removing controller.o(.ARM.exidx.text.dce_set_ki), (8 bytes).
+    Removing controller.o(.text.dce_set_kv), (26 bytes).
+    Removing controller.o(.ARM.exidx.text.dce_set_kv), (8 bytes).
+    Removing controller.o(.text.dce_set_kd), (26 bytes).
+    Removing controller.o(.ARM.exidx.text.dce_set_kd), (8 bytes).
+    Removing controller.o(.text.dce_set_default), (88 bytes).
+    Removing controller.o(.ARM.exidx.text.dce_set_default), (8 bytes).
+    Removing controller.o(.text.dce_init), (140 bytes).
+    Removing controller.o(.ARM.exidx.text.dce_init), (8 bytes).
+    Removing controller.o(.text.current_tracker_init), (96 bytes).
     Removing controller.o(.ARM.exidx.text.current_tracker_init), (8 bytes).
-    Removing controller.o(.text.current_tracker_set_up_rate), (40 bytes).
+    Removing controller.o(.text.current_tracker_set_up_rate), (44 bytes).
     Removing controller.o(.ARM.exidx.text.current_tracker_set_up_rate), (8 bytes).
-    Removing controller.o(.text.current_tracker_set_down_rate), (40 bytes).
+    Removing controller.o(.text.current_tracker_set_down_rate), (44 bytes).
     Removing controller.o(.ARM.exidx.text.current_tracker_set_down_rate), (8 bytes).
     Removing controller.o(.text.current_tracker_new_task), (16 bytes).
     Removing controller.o(.ARM.exidx.text.current_tracker_new_task), (8 bytes).
     Removing controller.o(.text.current_tracker_capture_goal), (254 bytes).
     Removing controller.o(.ARM.exidx.text.current_tracker_capture_goal), (8 bytes).
-    Removing controller.o(.text.current_tracker_set_default), (82 bytes).
+    Removing controller.o(.text.current_tracker_set_default), (94 bytes).
     Removing controller.o(.ARM.exidx.text.current_tracker_set_default), (8 bytes).
-    Removing controller.o(.text.speed_tracker_init), (94 bytes).
+    Removing controller.o(.text.speed_tracker_init), (104 bytes).
     Removing controller.o(.ARM.exidx.text.speed_tracker_init), (8 bytes).
-    Removing controller.o(.text.speed_tracker_set_up_acc), (46 bytes).
+    Removing controller.o(.text.speed_tracker_set_up_acc), (48 bytes).
     Removing controller.o(.ARM.exidx.text.speed_tracker_set_up_acc), (8 bytes).
-    Removing controller.o(.text.speed_tracker_set_down_acc), (42 bytes).
+    Removing controller.o(.text.speed_tracker_set_down_acc), (44 bytes).
     Removing controller.o(.ARM.exidx.text.speed_tracker_set_down_acc), (8 bytes).
     Removing controller.o(.text.speed_tracker_new_task), (16 bytes).
     Removing controller.o(.ARM.exidx.text.speed_tracker_new_task), (8 bytes).
     Removing controller.o(.text.speed_tracker_capture_goal), (254 bytes).
     Removing controller.o(.ARM.exidx.text.speed_tracker_capture_goal), (8 bytes).
-    Removing controller.o(.text.speed_tracker_set_default), (80 bytes).
+    Removing controller.o(.text.speed_tracker_set_default), (88 bytes).
     Removing controller.o(.ARM.exidx.text.speed_tracker_set_default), (8 bytes).
-    Removing controller.o(.text.postion_tracker_set_maxSpeed), (46 bytes).
-    Removing controller.o(.ARM.exidx.text.postion_tracker_set_maxSpeed), (8 bytes).
-    Removing controller.o(.text.postion_tracker_set_up_acc), (46 bytes).
+    Removing controller.o(.text.postion_tracker_set_max_speed), (48 bytes).
+    Removing controller.o(.ARM.exidx.text.postion_tracker_set_max_speed), (8 bytes).
+    Removing controller.o(.text.postion_tracker_set_up_acc), (48 bytes).
     Removing controller.o(.ARM.exidx.text.postion_tracker_set_up_acc), (8 bytes).
-    Removing controller.o(.text.postion_tracker_set_down_acc), (60 bytes).
+    Removing controller.o(.text.postion_tracker_set_down_acc), (64 bytes).
     Removing controller.o(.ARM.exidx.text.postion_tracker_set_down_acc), (8 bytes).
-    Removing controller.o(.text.postion_tracker_set_default), (142 bytes).
+    Removing controller.o(.text.postion_tracker_set_default), (156 bytes).
     Removing controller.o(.ARM.exidx.text.postion_tracker_set_default), (8 bytes).
-    Removing controller.o(.bss.controller), (224 bytes).
+    Removing controller.o(.text.postion_tracker_init), (160 bytes).
+    Removing controller.o(.ARM.exidx.text.postion_tracker_init), (8 bytes).
+    Removing controller.o(.text.postion_tracker_new_task), (20 bytes).
+    Removing controller.o(.ARM.exidx.text.postion_tracker_new_task), (8 bytes).
+    Removing controller.o(.text.postion_tracker_capture_goal), (794 bytes).
+    Removing controller.o(.ARM.exidx.text.postion_tracker_capture_goal), (8 bytes).
+    Removing controller.o(.text.position_interp_init), (28 bytes).
+    Removing controller.o(.ARM.exidx.text.position_interp_init), (8 bytes).
+    Removing controller.o(.text.position_interp_new_task), (22 bytes).
+    Removing controller.o(.ARM.exidx.text.position_interp_new_task), (8 bytes).
+    Removing controller.o(.text.position_interp_capture_goal), (58 bytes).
+    Removing controller.o(.ARM.exidx.text.position_interp_capture_goal), (8 bytes).
+    Removing controller.o(.text.traj_tracker_set_down_acc), (48 bytes).
+    Removing controller.o(.ARM.exidx.text.traj_tracker_set_down_acc), (8 bytes).
+    Removing controller.o(.text.traj_tracker_set_over_time), (64 bytes).
+    Removing controller.o(.ARM.exidx.text.traj_tracker_set_over_time), (8 bytes).
+    Removing controller.o(.text.traj_tracker_set_default), (116 bytes).
+    Removing controller.o(.ARM.exidx.text.traj_tracker_set_default), (8 bytes).
+    Removing controller.o(.text.traj_tracker_init), (148 bytes).
+    Removing controller.o(.ARM.exidx.text.traj_tracker_init), (8 bytes).
+    Removing controller.o(.text.traj_tracker_new_task), (28 bytes).
+    Removing controller.o(.ARM.exidx.text.traj_tracker_new_task), (8 bytes).
+    Removing controller.o(.text.traj_tracker_capture_goal), (350 bytes).
+    Removing controller.o(.ARM.exidx.text.traj_tracker_capture_goal), (8 bytes).
+    Removing controller.o(.bss.controller), (352 bytes).
+    Removing motor.o(.text), (0 bytes).
 
-898 unused section(s) (total 58350 bytes) removed from the image.
+945 unused section(s) (total 61132 bytes) removed from the image.
 
 ==============================================================================
 
@@ -2026,9 +2149,15 @@ Image Symbol Table
     ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
     ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
     ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
+    ../fplib/fcmp.s                          0x00000000   Number         0  fcmp.o ABSOLUTE
+    ../fplib/fcmpi.s                         0x00000000   Number         0  fcmpi.o ABSOLUTE
     ../fplib/fdiv.s                          0x00000000   Number         0  fdiv.o ABSOLUTE
+    ../fplib/feqf.s                          0x00000000   Number         0  feqf.o ABSOLUTE
     ../fplib/ffix.s                          0x00000000   Number         0  ffix.o ABSOLUTE
     ../fplib/fflt.s                          0x00000000   Number         0  fflt_clz.o ABSOLUTE
+    ../fplib/fgeqf.s                         0x00000000   Number         0  fgeqf.o ABSOLUTE
+    ../fplib/fleqf.s                         0x00000000   Number         0  fleqf.o ABSOLUTE
+    ../fplib/fmul.s                          0x00000000   Number         0  fmul.o ABSOLUTE
     ../fplib/fnaninf.s                       0x00000000   Number         0  fnaninf.o ABSOLUTE
     ../fplib/fpinit.s                        0x00000000   Number         0  fpinit.o ABSOLUTE
     ../fplib/fpinit_empty.s                  0x00000000   Number         0  fpinit_empty.o ABSOLUTE
@@ -2042,6 +2171,7 @@ Image Symbol Table
     encoder_calibration.c                    0x00000000   Number         0  encoder_calibration.o ABSOLUTE
     gpio.c                                   0x00000000   Number         0  gpio.o ABSOLUTE
     main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    motor.c                                  0x00000000   Number         0  motor.o ABSOLUTE
     sin_map.c                                0x00000000   Number         0  sin_map.o ABSOLUTE
     spi.c                                    0x00000000   Number         0  spi.o ABSOLUTE
     startup_stm32f103xb.s                    0x00000000   Number         0  startup_stm32f103xb.o ABSOLUTE
@@ -2411,63 +2541,63 @@ Memory Map of the image
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08008000   0x08008000   0x000000ec   Data   RO            3    RESET               startup_stm32f103xb.o
-    0x080080ec   0x080080ec   0x00000008   Code   RO         1171  * !!!main             c_w.l(__main.o)
-    0x080080f4   0x080080f4   0x00000034   Code   RO         1355    !!!scatter          c_w.l(__scatter.o)
-    0x08008128   0x08008128   0x0000001a   Code   RO         1357    !!handler_copy      c_w.l(__scatter_copy.o)
+    0x080080ec   0x080080ec   0x00000008   Code   RO         1218  * !!!main             c_w.l(__main.o)
+    0x080080f4   0x080080f4   0x00000034   Code   RO         1414    !!!scatter          c_w.l(__scatter.o)
+    0x08008128   0x08008128   0x0000001a   Code   RO         1416    !!handler_copy      c_w.l(__scatter_copy.o)
     0x08008142   0x08008142   0x00000002   PAD
-    0x08008144   0x08008144   0x0000001c   Code   RO         1359    !!handler_zi        c_w.l(__scatter_zi.o)
-    0x08008160   0x08008160   0x00000002   Code   RO         1217    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
-    0x08008162   0x08008162   0x00000000   Code   RO         1224    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
-    0x08008162   0x08008162   0x00000000   Code   RO         1226    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
-    0x08008162   0x08008162   0x00000000   Code   RO         1228    .ARM.Collect$$libinit$$00000006  c_w.l(libinit2.o)
-    0x08008162   0x08008162   0x00000000   Code   RO         1231    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
-    0x08008162   0x08008162   0x00000000   Code   RO         1233    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
-    0x08008162   0x08008162   0x00000000   Code   RO         1235    .ARM.Collect$$libinit$$00000010  c_w.l(libinit2.o)
-    0x08008162   0x08008162   0x00000000   Code   RO         1238    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
-    0x08008162   0x08008162   0x00000000   Code   RO         1240    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
-    0x08008162   0x08008162   0x00000000   Code   RO         1242    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
-    0x08008162   0x08008162   0x00000000   Code   RO         1244    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
-    0x08008162   0x08008162   0x00000000   Code   RO         1246    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
-    0x08008162   0x08008162   0x00000000   Code   RO         1248    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
-    0x08008162   0x08008162   0x00000000   Code   RO         1250    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
-    0x08008162   0x08008162   0x00000000   Code   RO         1252    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
-    0x08008162   0x08008162   0x00000000   Code   RO         1254    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
-    0x08008162   0x08008162   0x00000000   Code   RO         1256    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
-    0x08008162   0x08008162   0x00000000   Code   RO         1258    .ARM.Collect$$libinit$$00000027  c_w.l(libinit2.o)
-    0x08008162   0x08008162   0x00000000   Code   RO         1262    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
-    0x08008162   0x08008162   0x00000000   Code   RO         1264    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
-    0x08008162   0x08008162   0x00000000   Code   RO         1266    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
-    0x08008162   0x08008162   0x00000000   Code   RO         1268    .ARM.Collect$$libinit$$00000034  c_w.l(libinit2.o)
-    0x08008162   0x08008162   0x00000002   Code   RO         1269    .ARM.Collect$$libinit$$00000035  c_w.l(libinit2.o)
-    0x08008164   0x08008164   0x00000002   Code   RO         1291    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
-    0x08008166   0x08008166   0x00000000   Code   RO         1306    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
-    0x08008166   0x08008166   0x00000000   Code   RO         1308    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
-    0x08008166   0x08008166   0x00000000   Code   RO         1311    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
-    0x08008166   0x08008166   0x00000000   Code   RO         1314    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
-    0x08008166   0x08008166   0x00000000   Code   RO         1316    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
-    0x08008166   0x08008166   0x00000000   Code   RO         1319    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
-    0x08008166   0x08008166   0x00000002   Code   RO         1320    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
-    0x08008168   0x08008168   0x00000000   Code   RO         1187    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
-    0x08008168   0x08008168   0x00000000   Code   RO         1194    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
-    0x08008168   0x08008168   0x00000006   Code   RO         1206    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
-    0x0800816e   0x0800816e   0x00000000   Code   RO         1196    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
-    0x0800816e   0x0800816e   0x00000004   Code   RO         1197    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
-    0x08008172   0x08008172   0x00000000   Code   RO         1199    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
-    0x08008172   0x08008172   0x00000008   Code   RO         1200    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
-    0x0800817a   0x0800817a   0x00000002   Code   RO         1221    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
-    0x0800817c   0x0800817c   0x00000000   Code   RO         1271    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
-    0x0800817c   0x0800817c   0x00000004   Code   RO         1272    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
-    0x08008180   0x08008180   0x00000006   Code   RO         1273    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x08008144   0x08008144   0x0000001c   Code   RO         1418    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x08008160   0x08008160   0x00000002   Code   RO         1276    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x08008162   0x08008162   0x00000000   Code   RO         1283    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
+    0x08008162   0x08008162   0x00000000   Code   RO         1285    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x08008162   0x08008162   0x00000000   Code   RO         1287    .ARM.Collect$$libinit$$00000006  c_w.l(libinit2.o)
+    0x08008162   0x08008162   0x00000000   Code   RO         1290    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x08008162   0x08008162   0x00000000   Code   RO         1292    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x08008162   0x08008162   0x00000000   Code   RO         1294    .ARM.Collect$$libinit$$00000010  c_w.l(libinit2.o)
+    0x08008162   0x08008162   0x00000000   Code   RO         1297    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x08008162   0x08008162   0x00000000   Code   RO         1299    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x08008162   0x08008162   0x00000000   Code   RO         1301    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x08008162   0x08008162   0x00000000   Code   RO         1303    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x08008162   0x08008162   0x00000000   Code   RO         1305    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x08008162   0x08008162   0x00000000   Code   RO         1307    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x08008162   0x08008162   0x00000000   Code   RO         1309    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x08008162   0x08008162   0x00000000   Code   RO         1311    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x08008162   0x08008162   0x00000000   Code   RO         1313    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x08008162   0x08008162   0x00000000   Code   RO         1315    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x08008162   0x08008162   0x00000000   Code   RO         1317    .ARM.Collect$$libinit$$00000027  c_w.l(libinit2.o)
+    0x08008162   0x08008162   0x00000000   Code   RO         1321    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x08008162   0x08008162   0x00000000   Code   RO         1323    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x08008162   0x08008162   0x00000000   Code   RO         1325    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x08008162   0x08008162   0x00000000   Code   RO         1327    .ARM.Collect$$libinit$$00000034  c_w.l(libinit2.o)
+    0x08008162   0x08008162   0x00000002   Code   RO         1328    .ARM.Collect$$libinit$$00000035  c_w.l(libinit2.o)
+    0x08008164   0x08008164   0x00000002   Code   RO         1350    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x08008166   0x08008166   0x00000000   Code   RO         1365    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x08008166   0x08008166   0x00000000   Code   RO         1367    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x08008166   0x08008166   0x00000000   Code   RO         1370    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
+    0x08008166   0x08008166   0x00000000   Code   RO         1373    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
+    0x08008166   0x08008166   0x00000000   Code   RO         1375    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x08008166   0x08008166   0x00000000   Code   RO         1378    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x08008166   0x08008166   0x00000002   Code   RO         1379    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
+    0x08008168   0x08008168   0x00000000   Code   RO         1238    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x08008168   0x08008168   0x00000000   Code   RO         1251    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x08008168   0x08008168   0x00000006   Code   RO         1263    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x0800816e   0x0800816e   0x00000000   Code   RO         1253    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x0800816e   0x0800816e   0x00000004   Code   RO         1254    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x08008172   0x08008172   0x00000000   Code   RO         1256    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x08008172   0x08008172   0x00000008   Code   RO         1257    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x0800817a   0x0800817a   0x00000002   Code   RO         1280    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x0800817c   0x0800817c   0x00000000   Code   RO         1330    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x0800817c   0x0800817c   0x00000004   Code   RO         1331    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x08008180   0x08008180   0x00000006   Code   RO         1332    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
     0x08008186   0x08008186   0x00000002   PAD
     0x08008188   0x08008188   0x00000040   Code   RO            4    .text               startup_stm32f103xb.o
-    0x080081c8   0x080081c8   0x00000006   Code   RO         1169    .text               c_w.l(heapauxi.o)
-    0x080081ce   0x080081ce   0x0000004a   Code   RO         1208    .text               c_w.l(sys_stackheap_outer.o)
-    0x08008218   0x08008218   0x00000012   Code   RO         1210    .text               c_w.l(exit.o)
+    0x080081c8   0x080081c8   0x00000006   Code   RO         1216    .text               c_w.l(heapauxi.o)
+    0x080081ce   0x080081ce   0x0000004a   Code   RO         1267    .text               c_w.l(sys_stackheap_outer.o)
+    0x08008218   0x08008218   0x00000012   Code   RO         1269    .text               c_w.l(exit.o)
     0x0800822a   0x0800822a   0x00000002   PAD
-    0x0800822c   0x0800822c   0x00000008   Code   RO         1218    .text               c_w.l(libspace.o)
-    0x08008234   0x08008234   0x0000000c   Code   RO         1281    .text               c_w.l(sys_exit.o)
-    0x08008240   0x08008240   0x00000002   Code   RO         1296    .text               c_w.l(use_no_semi.o)
-    0x08008242   0x08008242   0x00000000   Code   RO         1298    .text               c_w.l(indicate_semi.o)
+    0x0800822c   0x0800822c   0x00000008   Code   RO         1277    .text               c_w.l(libspace.o)
+    0x08008234   0x08008234   0x0000000c   Code   RO         1340    .text               c_w.l(sys_exit.o)
+    0x08008240   0x08008240   0x00000002   Code   RO         1355    .text               c_w.l(use_no_semi.o)
+    0x08008242   0x08008242   0x00000000   Code   RO         1357    .text               c_w.l(indicate_semi.o)
     0x08008242   0x08008242   0x00000002   PAD
     0x08008244   0x08008244   0x00000002   Code   RO           94    .text.BusFault_Handler  stm32f1xx_it.o
     0x08008246   0x08008246   0x00000002   PAD
@@ -2563,7 +2693,7 @@ Memory Map of the image
     0x080099ba   0x080099ba   0x00000008   Data   RO         1030    .rodata.APBPrescTable  system_stm32f1xx.o
     0x080099c2   0x080099c2   0x00000002   Data   RO          341    .rodata.HAL_RCC_GetSysClockFreq.aPredivFactorTable  stm32f1xx_hal_rcc.o
     0x080099c4   0x080099c4   0x00000010   Data   RO          340    .rodata.cst16       stm32f1xx_hal_rcc.o
-    0x080099d4   0x080099d4   0x00000020   Data   RO         1354    Region$$Table       anon$$obj.o
+    0x080099d4   0x080099d4   0x00000020   Data   RO         1413    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x080099f8, Size: 0x000007a8, Max: 0x00005000, ABSOLUTE)
@@ -2573,7 +2703,7 @@ Memory Map of the image
     0x20000000   0x080099f8   0x00000008   Data   RW          303    .data..L_MergedGlobals  stm32f1xx_hal.o
     0x20000008   0x08009a00   0x00000004   Data   RW         1028    .data.SystemCoreClock  system_stm32f1xx.o
     0x2000000c   0x08009a04   0x00000004   PAD
-    0x20000010        -       0x00000060   Zero   RW         1219    .bss                c_w.l(libspace.o)
+    0x20000010        -       0x00000060   Zero   RW         1278    .bss                c_w.l(libspace.o)
     0x20000070        -       0x00000058   Zero   RW           40    .bss.hspi1          spi.o
     0x200000c8        -       0x00000048   Zero   RW           63    .bss.htim1          tim.o
     0x20000110        -       0x00000048   Zero   RW           64    .bss.htim3          tim.o

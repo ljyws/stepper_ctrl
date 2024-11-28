@@ -20,12 +20,12 @@
 #include "sin_map.h"
 #include "tb67h450.h"
 // #include "motor.h"
-// #include "controller.h"
+#include "controller.h"
 #include "encoder.h"
 #include "encoder_calibration.h"
 
 // #include "position_interp.h"
-// #include "move_reconstruct.h"
+// #include "controller.traj_tracker.h"
 // #include "main_ctrl.h"
 
 #include "bsp_flash.h"

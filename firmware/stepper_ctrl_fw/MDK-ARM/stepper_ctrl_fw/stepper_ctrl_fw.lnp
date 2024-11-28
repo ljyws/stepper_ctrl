@@ -30,6 +30,7 @@
 "stepper_ctrl_fw\encoder_calibration.o"
 "stepper_ctrl_fw\sin_map.o"
 "stepper_ctrl_fw\controller.o"
+"stepper_ctrl_fw\motor.o"
 --strict --scatter "stepper_ctrl_fw\stepper_ctrl_fw.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

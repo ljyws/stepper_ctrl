@@ -1,8 +1,8 @@
-stepper_ctrl_fw/tb67h450.o: ..\Ctrl\tb67h450.c ..\Ctrl\tb67h450.h \
-  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdbool.h \
-  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdlib.h \
+stepper_ctrl_fw/motor.o: ..\Ctrl\motor.c ..\Ctrl\motor.h \
   ..\Core\Inc\board_cfg.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdbool.h \
   E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\math.h \
   ..\Core\Inc\spi.h ..\Core\Inc\main.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h \
@@ -35,5 +35,6 @@ stepper_ctrl_fw/tb67h450.o: ..\Ctrl\tb67h450.c ..\Ctrl\tb67h450.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim_ex.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h \
   ..\Core\Inc\tim.h ..\Core\Inc\gpio.h ..\Core\Inc\usart.h \
-  ..\Ctrl\sin_map.h ..\Ctrl\controller.h ..\Encoder\encoder.h \
-  ..\Encoder\encoder_calibration.h ..\Bsp\bsp_flash.h
+  ..\Ctrl\sin_map.h ..\Ctrl\tb67h450.h ..\Ctrl\controller.h \
+  ..\Encoder\encoder.h ..\Encoder\encoder_calibration.h \
+  ..\Bsp\bsp_flash.h

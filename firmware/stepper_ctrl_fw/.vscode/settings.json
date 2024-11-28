@@ -9,6 +9,8 @@
         "encoder_calibration.h": "c",
         "spi.h": "c",
         "usart.h": "c",
-        "type_traits": "c"
+        "type_traits": "c",
+        "encoder.h": "c",
+        "motor.h": "c"
     }
 }

@@ -564,6 +564,11 @@
               <FileType>1</FileType>
               <FilePath>..\Ctrl\controller.c</FilePath>
             </File>
+            <File>
+              <FileName>motor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Ctrl\motor.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
