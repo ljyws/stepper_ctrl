@@ -161,14 +161,14 @@ void postion_tracker_set_down_acc(int32_t value);
 void postion_tracker_set_default(void);					
 
 void postion_tracker_init(void);																				
-void postion_tracker_new_task(int32_t real_location, int32_t real_speed);
-void postion_tracker_capture_goal(int32_t goal_location);						
+void postion_tracker_new_task(int32_t real_postion, int32_t real_speed);
+void postion_tracker_capture_goal(int32_t goal_position);						
 
 typedef struct
 {
 	int32_t		record_location;				
 	int32_t		record_location_last;		
-	int32_t		est_location;					
+	int32_t		est_position;					
 	int32_t		est_speed_mut;				
 	int32_t		est_speed;							
 
@@ -177,8 +177,8 @@ typedef struct
 }position_interp_t;
 
 void position_interp_init(void);				
-void position_interp_new_task(int32_t real_location, int32_t real_speed);
-void position_interp_capture_goal(int32_t goal_location);								
+void position_interp_new_task(int32_t real_postion, int32_t real_speed);
+void position_interp_capture_goal(int32_t goal_position);								
 
 
 typedef struct
@@ -217,8 +217,8 @@ void traj_tracker_set_over_time(uint16_t value);
 void traj_tracker_set_default(void);					
 		    
 void traj_tracker_init(void);																					
-void traj_tracker_new_task(int32_t real_location, int32_t real_speed);			
-void traj_tracker_capture_goal(int32_t goal_location, int32_t goal_speed);
+void traj_tracker_new_task(int32_t real_postion, int32_t real_speed);			
+void traj_tracker_capture_goal(int32_t goal_position, int32_t goal_speed);
 
 
 typedef struct
@@ -233,5 +233,6 @@ typedef struct
 }controller_t;
 extern controller_t controller;
 
-
+void controller_init(void);
+void controller_clear_integral(void);
 #endif

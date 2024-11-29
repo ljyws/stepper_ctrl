@@ -2,6 +2,30 @@
 
 controller_t controller;
 
+void controller_init(void)
+{
+	pid_init();
+	dce_init();
+	current_tracker_init();
+	speed_tracker_init();
+	postion_tracker_init();
+	position_interp_init();
+	traj_tracker_init();
+}
+
+void controller_clear_integral(void)
+{
+	controller.pid.i_mut = 0;
+	controller.pid.i_dec = 0;
+	controller.pid.output_ki = 0;
+	
+	controller.dce.i_mut = 0;
+	controller.dce.i_dec = 0;
+	controller.dce.output_ki = 0;
+}
+
+/************************************************************************************************************/
+
 void pid_set_kp(uint16_t _k)
 {
 	if(_k <= 1024)
@@ -157,6 +181,8 @@ void dce_init(void)
 
 
 /************************************************************************************************************/
+
+
 void current_tracker_init(void)
 {
     controller.current_tracker.config_.default_up_rate = MOVE_RATED_UP_CURRENT_RATE / 10;
@@ -392,7 +418,7 @@ void speed_tracker_set_default(void)
 void postion_tracker_set_max_speed(int32_t value)
 {
 	value = abs(value);
-	if((value > 0) && (value <= Move_Rated_Speed))
+	if((value > 0) && (value <= MOVE_RATED_SPEED))
 	{
 		controller.position_tracker.config_.max_speed = value;
 		controller.position_tracker.config_.valid_max_speed = true;
@@ -440,7 +466,7 @@ void postion_tracker_set_default(void)
 
 void postion_tracker_init(void)
 {
-	controller.position_tracker.config_.default_max_speed = Move_Rated_Speed;
+	controller.position_tracker.config_.default_max_speed = MOVE_RATED_SPEED;
 	controller.position_tracker.config_.default_up_acc = MOVE_RATED_UP_ACC / 10;
 	controller.position_tracker.config_.default_down_acc = MOVE_RATED_DOWN_ACC / 10;
 
@@ -462,17 +488,17 @@ void postion_tracker_init(void)
 	controller.position_tracker.go_speed = 0;
 }
 
-void postion_tracker_new_task(int32_t real_location, int32_t real_speed)
+void postion_tracker_new_task(int32_t real_postion, int32_t real_speed)
 {
 	controller.position_tracker.course_acc_integral = 0;			
 	controller.position_tracker.course_speed = real_speed;			
 	controller.position_tracker.course_speed_integral = 0;		
-	controller.position_tracker.course_location = real_location;	
+	controller.position_tracker.course_location = real_postion;	
 }		
 
-void postion_tracker_capture_goal(int32_t goal_location)
+void postion_tracker_capture_goal(int32_t goal_position)
 {
-	int32_t location_sub = goal_location - controller.position_tracker.course_location;
+	int32_t location_sub = goal_position - controller.position_tracker.course_location;
 
 	if(location_sub == 0)
 	{
@@ -659,7 +685,7 @@ void position_interp_init(void)
 {
 	controller.position_interp.record_location = 0;
 	controller.position_interp.record_location_last = 0;
-	controller.position_interp.est_location = 0;
+	controller.position_interp.est_position = 0;
 	controller.position_interp.est_speed_mut = 0;
 	controller.position_interp.est_speed = 0;
 
@@ -667,27 +693,27 @@ void position_interp_init(void)
 	controller.position_interp.go_speed = 0;
 }
 
-void position_interp_new_task(int32_t real_location, int32_t real_speed)
+void position_interp_new_task(int32_t real_postion, int32_t real_speed)
 {
-	controller.position_interp.record_location = real_location;
-	controller.position_interp.record_location_last = real_location;
-	controller.position_interp.est_location = real_location;
+	controller.position_interp.record_location = real_postion;
+	controller.position_interp.record_location_last = real_postion;
+	controller.position_interp.est_position = real_postion;
 	controller.position_interp.est_speed = real_speed;
 }
 
-void position_interp_capture_goal(int32_t goal_location)
+void position_interp_capture_goal(int32_t goal_position)
 {
 	controller.position_interp.record_location_last = controller.position_interp.record_location;
-	controller.position_interp.record_location = goal_location;
+	controller.position_interp.record_location = goal_position;
 
 	controller.position_interp.est_speed_mut += (((controller.position_interp.record_location - controller.position_interp.record_location_last) * CONTROL_FREQ_HZ)
 							  + ((int32_t)(controller.position_interp.est_speed  << 6) - (int32_t)(controller.position_interp.est_speed)));
 	controller.position_interp.est_speed = (controller.position_interp.est_speed_mut >> 6);							//(对64取整)(向0取整)(保留符号位)
 	controller.position_interp.est_speed_mut = (controller.position_interp.est_speed_mut - (controller.position_interp.est_speed << 6));	//(对64取余)(向0取整)(保留符号位)
 
-	controller.position_interp.est_location = controller.position_interp.record_location;
+	controller.position_interp.est_position = controller.position_interp.record_location;
 
-	controller.position_interp.go_location = controller.position_interp.est_location;
+	controller.position_interp.go_location = controller.position_interp.est_position;
 	controller.position_interp.go_speed = controller.position_interp.est_speed;
 }
 
@@ -752,7 +778,7 @@ void traj_tracker_init(void)
 	controller.traj_tracker.go_speed = 0;
 }																		
 
-void traj_tracker_new_task(int32_t real_location, int32_t real_speed)
+void traj_tracker_new_task(int32_t real_postion, int32_t real_speed)
 {
 	controller.traj_tracker.record_timer = 0;								
 	controller.traj_tracker.overtime_flag = false;			
@@ -760,20 +786,20 @@ void traj_tracker_new_task(int32_t real_location, int32_t real_speed)
 	controller.traj_tracker.speed_course_dec = 0;						
 	controller.traj_tracker.speed_course = real_speed;
 	controller.traj_tracker.location_course_dec = 0;
-	controller.traj_tracker.location_course = real_location;	
+	controller.traj_tracker.location_course = real_postion;	
 }	
 
 
-void traj_tracker_capture_goal(int32_t goal_location, int32_t goal_speed)
+void traj_tracker_capture_goal(int32_t goal_position, int32_t goal_speed)
 {
-	if( (goal_speed != controller.traj_tracker.record_speed) || (goal_location != controller.traj_tracker.record_location))
+	if( (goal_speed != controller.traj_tracker.record_speed) || (goal_position != controller.traj_tracker.record_location))
 	{
 		controller.traj_tracker.record_timer = 0;
 		controller.traj_tracker.record_speed = goal_speed;
-		controller.traj_tracker.record_location = goal_location;
+		controller.traj_tracker.record_location = goal_position;
 
 		controller.traj_tracker.dyn_speed_acc = (int32_t)((float)(goal_speed + controller.traj_tracker.speed_course) * (float)(goal_speed - controller.traj_tracker.speed_course)
-											    / (float)(2 * (goal_location - controller.traj_tracker.location_course)));
+											    / (float)(2 * (goal_position - controller.traj_tracker.location_course)));
 
 		controller.traj_tracker.overtime_flag = false;
 	}

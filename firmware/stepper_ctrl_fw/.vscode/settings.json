@@ -11,6 +11,9 @@
         "usart.h": "c",
         "type_traits": "c",
         "encoder.h": "c",
-        "motor.h": "c"
+        "motor.h": "c",
+        "main_loop.h": "c",
+        "bsp_uart.h": "c",
+        "glazer_api.h": "c"
     }
 }

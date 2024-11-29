@@ -35,5 +35,9 @@ stepper_ctrl_fw/encoder.o: ..\Encoder\encoder.c ..\Encoder\encoder.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim_ex.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h \
   ..\Core\Inc\tim.h ..\Core\Inc\gpio.h ..\Core\Inc\usart.h \
-  ..\Ctrl\sin_map.h ..\Ctrl\tb67h450.h ..\Ctrl\controller.h \
-  ..\Encoder\encoder_calibration.h ..\Bsp\bsp_flash.h
+  ..\Core\Inc\dma.h ..\Ctrl\sin_map.h ..\Ctrl\tb67h450.h ..\Ctrl\motor.h \
+  ..\Ctrl\controller.h ..\Encoder\encoder_calibration.h \
+  ..\Bsp\bsp_flash.h ..\Bsp\bsp_mcu.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\string.h \
+  ..\Bsp\bsp_uart.h ..\Application\glazer_api.h

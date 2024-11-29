@@ -39,25 +39,25 @@ typedef struct
 	bool valid_stall_switch;																									
 	bool stall_switch;																											
 
-	int32_t	real_lap_location;																											
-	int32_t	real_lap_location_last;																										
-	int32_t	real_location;																													
-	int32_t	real_location_last;																											
+	int32_t	real_lap_position;																											
+	int32_t	real_lap_position_last;																										
+	int32_t	real_postion;																													
+	int32_t	real_postion_last;																											
 
 	int32_t	est_speed_mut;																														
 	int32_t	est_speed;																																
-	int32_t	est_lead_location;																												
-	int32_t	est_lead_location_debug;																								
-	int32_t	est_location;																														
+	int32_t	est_lead_position;																												
+	int32_t	est_lead_position_debug;																								
+	int32_t	est_position;																														
 	int32_t	est_error;																															
 
-	int32_t	goal_location;																												
+	int32_t	goal_position;																												
 	int32_t	goal_speed;																															
 	int16_t	goal_current;																														
 	bool goal_disable;																														
 	bool goal_brake;																																
 
-	int32_t	soft_location;																														
+	int32_t	soft_position;																														
 	int32_t	soft_speed;																																
 	int16_t	soft_current;																															
 	bool soft_disable;																														
@@ -86,7 +86,7 @@ void motor_ctrl_set_motor_mode(motor_ctrl_mode_e _mode);
 void motor_ctrl_set_stall_switch(bool _switch);	
 void motor_ctrl_set_default(void);						
 
-void motor_ctrl_write_goal_location(int32_t value);								
+void motor_ctrl_write_goal_position(int32_t value);								
 void motor_ctrl_write_goal_speed(int32_t value);						
 void motor_ctrl_write_goal_current(int16_t value);			
 void motor_ctrl_write_goal_disable(uint16_t value);				
@@ -96,6 +96,20 @@ int32_t motor_control_advance_compen(int32_t _speed);
 void motor_ctrl_init(void);																			
 void motor_ctrl_callback(void);																		
 void motor_ctrl_clear_integral(void);										
-void motor_ctrl_clear_stall(void);		
+	
+bool motor_get_is_calibration();
+int32_t motor_get_pos();
+int32_t motor_get_spd();
+void motor_set_pos(int32_t _pos, int32_t _spd);
+void motor_set_spd(int32_t _spd);
+void motor_run_break();
+bool motor_get_stall_flag();
+void motor_ctrl_clear_stall(void);	
+void motor_reset_encoder();
+void motor_set_pid_parm(uint16_t kp, uint16_t ki, uint16_t kd);
+void motor_set_dce_parm(uint16_t kp, uint16_t ki, uint16_t kv, uint16_t kd);
+motor_ctrl_mode_e motor_get_curr_ctrl_mode();
+
+
 
 #endif // !__MOTOR_CTRL_H__

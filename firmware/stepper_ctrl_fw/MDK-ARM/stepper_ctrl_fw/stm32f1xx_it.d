@@ -29,4 +29,15 @@ stepper_ctrl_fw/stm32f1xx_it.o: ..\Core\Src\stm32f1xx_it.c \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim_ex.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h \
-  ..\Core\Inc\stm32f1xx_it.h
+  ..\Core\Inc\stm32f1xx_it.h ..\Bsp\bsp_uart.h ..\Core\Inc\board_cfg.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdbool.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdlib.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\math.h \
+  ..\Core\Inc\spi.h ..\Core\Inc\tim.h ..\Core\Inc\gpio.h \
+  ..\Core\Inc\usart.h ..\Core\Inc\dma.h ..\Ctrl\sin_map.h \
+  ..\Ctrl\tb67h450.h ..\Ctrl\motor.h ..\Ctrl\controller.h \
+  ..\Encoder\encoder.h ..\Encoder\encoder_calibration.h \
+  ..\Bsp\bsp_flash.h ..\Bsp\bsp_mcu.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\string.h \
+  ..\Application\glazer_api.h
