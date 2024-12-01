@@ -16,8 +16,8 @@
         <TargetCommonOption>
           <Device>STM32F103CB</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32F1xx_DFP.2.4.0</PackID>
-          <PackURL>http://www.keil.com/pack/</PackURL>
+          <PackID>Keil.STM32F1xx_DFP.2.4.1</PackID>
+          <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000-0x20004FFF) IROM(0x8000000-0x801FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3") TZ</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -654,6 +654,11 @@
               <FileName>ws2812.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Ctrl\ws2812.c</FilePath>
+            </File>
+            <File>
+              <FileName>main_loop_it.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Ctrl\main_loop_it.c</FilePath>
             </File>
           </Files>
         </Group>

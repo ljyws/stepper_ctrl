@@ -42,7 +42,10 @@ typedef struct
 	int32_t	real_lap_position;																											
 	int32_t	real_lap_position_last;																										
 	int32_t	real_postion;																													
-	int32_t	real_postion_last;																											
+	int32_t	real_postion_last;		
+
+	int32_t position_offset;	
+	int32_t position;																								
 
 	int32_t	est_speed_mut;																														
 	int32_t	est_speed;																																

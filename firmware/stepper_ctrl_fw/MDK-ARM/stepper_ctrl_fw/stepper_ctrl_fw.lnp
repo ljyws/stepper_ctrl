@@ -37,6 +37,7 @@
 "stepper_ctrl_fw\motor.o"
 "stepper_ctrl_fw\main_loop.o"
 "stepper_ctrl_fw\ws2812.o"
+"stepper_ctrl_fw\main_loop_it.o"
 --strict --scatter "stepper_ctrl_fw\stepper_ctrl_fw.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

@@ -19,13 +19,14 @@
 #include "controller.h"
 #include "encoder.h"
 #include "encoder_calibration.h"
+#include "main_loop_it.h"
 
 #include "bsp_flash.h"
 #include "bsp_mcu.h"
 #include "bsp_uart.h"
 
-#define DOOR_MOTOR
-//#define LIFT_MOTOR
+//#define DOOR_MOTOR
+#define LIFT_MOTOR
 
 
 /********************  硬件配置区  ********************/

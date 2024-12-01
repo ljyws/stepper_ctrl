@@ -3,8 +3,10 @@
 
 #include "board_cfg.h"
 
-void breath_led(void);
+
 void main_loop(void);
+
+
 
 
 #endif // !__MAIN_LOOP_H__

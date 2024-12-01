@@ -13,7 +13,7 @@ void glazer_uart_rx_data_unpack(uint8_t *buff)
         {
 			spd_ = buff[4]<<24 | buff[5] << 16 | buff[6] << 8 | buff[7];
 			pos_ = buff[8]<<24 | buff[9] << 16 | buff[10] << 8 | buff[11];
-            glazer_set_motor_pos(pos_,spd_);
+            glazer_set_motor_pos(pos_+motor_ctrl.position_offset,spd_);
             break;
         }
 

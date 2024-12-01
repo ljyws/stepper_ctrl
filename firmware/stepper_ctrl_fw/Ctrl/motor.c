@@ -170,6 +170,9 @@ void motor_ctrl_init(void)
 	motor_ctrl.real_postion = 0;
 	motor_ctrl.real_postion_last = 0;
 
+	motor_ctrl.position_offset = 0;
+	motor_ctrl.position = 0;
+
 	motor_ctrl.est_speed_mut = 0;
 	motor_ctrl.est_speed = 0;
 	motor_ctrl.est_lead_position = 0;
@@ -209,19 +212,25 @@ void motor_ctrl_clear_integral(void)
 }
 
 
+bool _first_entry_call = true;
 void motor_ctrl_callback(void)
 {
 	// 第一次进入控制回调，主要是为了将编码器的值赋给电机控制器中
-	static bool _first_entry_call = true;
+
 	if (_first_entry_call)
 	{
-		motor_ctrl.real_lap_position = encoder.rectify_angle;
-		motor_ctrl.real_lap_position_last = encoder.rectify_angle;
-		motor_ctrl.real_postion = encoder.rectify_angle;
-		motor_ctrl.real_lap_position_last = encoder.rectify_angle;
+		motor_ctrl.real_lap_position 		= encoder.rectify_angle;
+		motor_ctrl.real_lap_position_last 	= encoder.rectify_angle;
+		motor_ctrl.real_postion 			= encoder.rectify_angle;
+		motor_ctrl.real_lap_position_last 	= encoder.rectify_angle;
+
+		motor_ctrl.position_offset = motor_ctrl.real_postion;
+		motor_ctrl.position = motor_ctrl.real_postion - motor_ctrl.position_offset;
 		_first_entry_call = false;
 		return;
 	}
+
+	motor_ctrl.position = motor_ctrl.real_postion - motor_ctrl.position_offset;
 
 	int32_t sub_data;
 
@@ -246,7 +255,8 @@ void motor_ctrl_callback(void)
 
 	motor_ctrl.est_error = motor_ctrl.soft_position - motor_ctrl.est_position;
 
-	if ((motor_ctrl.stall_flag) || (motor_ctrl.soft_disable) || (!encoder.rectify_valid))
+	if(0){}
+	else if ((motor_ctrl.stall_flag) || (motor_ctrl.soft_disable) || (!encoder.rectify_valid))
 	{
 		motor_ctrl_clear_integral();
 		motor_ctrl.foc_location = 0;
@@ -547,8 +557,9 @@ void motor_ctrl_clear_stall(void)
 
 void motor_reset_encoder()
 {
-	motor_ctrl.real_postion = 0;
-	motor_ctrl.real_postion_last = 0;
+	_first_entry_call = true;
+//	motor_ctrl.real_postion = 0;
+//	motor_ctrl.real_postion_last = 0;
 }
 
 void motor_set_pid_parm(uint16_t _kp, uint16_t _ki, uint16_t _kd)
