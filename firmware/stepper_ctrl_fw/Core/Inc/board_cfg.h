@@ -13,6 +13,7 @@
 #include <usart.h>
 #include <dma.h>
 
+#include "ws2812.h"
 #include "sin_map.h"
 #include "tb67h450.h"
 #include "motor.h"

@@ -5,7 +5,8 @@
 
 
 void main_loop(void);
-
+void time_second_run(void);
+void loop_second_base_1ms(void);
 
 
 

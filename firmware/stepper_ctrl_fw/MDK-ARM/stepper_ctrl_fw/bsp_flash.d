@@ -1,9 +1,9 @@
 stepper_ctrl_fw/bsp_flash.o: ..\Bsp\bsp_flash.c ..\Bsp\bsp_flash.h \
   ..\Core\Inc\board_cfg.h \
-  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\stdbool.h \
-  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\stdint.h \
-  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\stdlib.h \
-  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\math.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdbool.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdlib.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\math.h \
   ..\Core\Inc\spi.h ..\Core\Inc\main.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h \
   ..\Core\Inc\stm32f1xx_hal_conf.h \
@@ -15,11 +15,11 @@ stepper_ctrl_fw/bsp_flash.o: ..\Bsp\bsp_flash.c ..\Bsp\bsp_flash.h \
   ..\Drivers\CMSIS\Include\cmsis_version.h \
   ..\Drivers\CMSIS\Include\cmsis_compiler.h \
   ..\Drivers\CMSIS\Include\cmsis_armclang.h \
-  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
-  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   ..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\system_stm32f1xx.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
-  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stddef.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc_ex.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio_ex.h \
@@ -35,10 +35,10 @@ stepper_ctrl_fw/bsp_flash.o: ..\Bsp\bsp_flash.c ..\Bsp\bsp_flash.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim_ex.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h \
   ..\Core\Inc\tim.h ..\Core\Inc\gpio.h ..\Core\Inc\usart.h \
-  ..\Core\Inc\dma.h ..\Ctrl\sin_map.h ..\Ctrl\tb67h450.h ..\Ctrl\motor.h \
-  ..\Ctrl\controller.h ..\Encoder\encoder.h \
-  ..\Encoder\encoder_calibration.h ..\Ctrl\main_loop_it.h \
-  ..\Bsp\bsp_mcu.h \
-  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\stdio.h \
-  D:\keil\InstallFile\ARM\ARMCLANG\Bin\..\include\string.h \
+  ..\Core\Inc\dma.h ..\Ctrl\ws2812.h ..\Ctrl\sin_map.h \
+  ..\Ctrl\tb67h450.h ..\Ctrl\motor.h ..\Ctrl\controller.h \
+  ..\Encoder\encoder.h ..\Encoder\encoder_calibration.h \
+  ..\Ctrl\main_loop_it.h ..\Ctrl\main_loop.h ..\Bsp\bsp_mcu.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  E:\keil\installFile\ARM\ARMCLANG\Bin\..\include\string.h \
   ..\Bsp\bsp_uart.h ..\Application\glazer_api.h

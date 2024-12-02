@@ -2,7 +2,7 @@
 #define __MAIN_LOOP_IT_H__
 
 #include "board_cfg.h"
-
+#include "main_loop.h"
 typedef struct
 {
     // 中断计数器

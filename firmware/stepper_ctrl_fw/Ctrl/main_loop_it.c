@@ -16,27 +16,23 @@ void loop_it_sysTick_20khz(void)
     HAL_SYSTICK_Config(SystemCoreClock / 20000); // 更新为20K中断
 }
 
-/**
- * @brief This function handles System tick timer.
- * 启动初期由HAL库自动初始化的SysTick为1KHz
- * 由REIN库接管后修改的SysTick为20KHz
- **/
+
 void SysTick_Handler(void)
 {
     if (systick_20khz_flag)
     {
-		HAL_GPIO_WritePin(LED_GPIO_Port,LED_Pin,GPIO_PIN_SET);
         encoder_update();
 
         if (encode_cali.trigger)
             encoder_calibration_interrupt_callback();
         else
             motor_ctrl_callback();
-		HAL_GPIO_WritePin(LED_GPIO_Port,LED_Pin,GPIO_PIN_RESET);
+		
         lit_1ms_divider++;
         if (lit_1ms_divider >= 20)
         {
             lit_1ms_divider = 0;
+			loop_second_base_1ms();
             HAL_IncTick();
         }
     }
